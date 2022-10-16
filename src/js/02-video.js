@@ -6,6 +6,19 @@ const player = new Player(iframe);
 
 const STORAGE_KEY = 'videoplayer-current-time';
 
+player.on('timeupdate', throttle(onPlay, 500));
+
+function onPlay({ seconds }) {
+  localStorage.setItem(STORAGE_KEY, seconds);
+}
+
+player.setCurrentTime(localStorage.getItem(STORAGE_KEY));
+
+
+
+
+
+
 //const onPlay = function (data) {
 //  localStorage.setItem(STORAGE_KEY, data.seconds);
 //};
@@ -17,19 +30,4 @@ const STORAGE_KEY = 'videoplayer-current-time';
 //if (savedData) {
 //  player.setCurrentTime(localStorage.getItem(STORAGE_KEY));
 //}
-
-
-
-
-
-
-//!Коротший але видає помилку (працює)
-
-player.on('timeupdate', throttle(onPlay, 500));
-
-function onPlay({ seconds }) {
-  localStorage.setItem(STORAGE_KEY, seconds);
-}
-
-player.setCurrentTime(localStorage.getItem(STORAGE_KEY));
 
