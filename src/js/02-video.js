@@ -26,8 +26,8 @@ function timeConversion(videoTime) {
   } else {
     if (confirm("Продовжити перегляд відео?")) {
       startVideo()
-    //} else {
-    //  localStorage.removeItem(STORAGE_KEY)
+    } else {
+      localStorage.removeItem(STORAGE_KEY)
     }
   }
 }
