@@ -130,7 +130,7 @@ export const galleryItems = [
       'https://habrastorage.org/webt/ke/ax/bi/keaxbibvns5ubiegqa-nbpyokjg.jpeg',
     original:
       'https://habrastorage.org/webt/ke/ax/bi/keaxbibvns5ubiegqa-nbpyokjg.jpeg',
-    description: 'Лисичансько',
+    description: 'Лисичанськ',
   },
   {
     preview:
