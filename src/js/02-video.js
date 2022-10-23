@@ -10,7 +10,7 @@ const videoTime = localStorage.getItem(STORAGE_KEY)
 timeConversion(videoTime)
 
 function startVideo() {
-  player.setCurrentTime(localStorage.getItem(STORAGE_KEY))
+  player.setCurrentTime(localStorage.getItem(STORAGE_KEY) || 0)
 }
 
 player.on('timeupdate', throttle(onPlay, 500));
